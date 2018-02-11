@@ -4,6 +4,11 @@ Param(
 [string]$username
 )
 
+
+$pa=$username
+echo "Hello $pa!"
+
+
 echo Hello
 $PSVersionTable
 
