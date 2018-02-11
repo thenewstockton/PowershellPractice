@@ -1,0 +1,5 @@
+D:\Github\Powershell\Powershell\bin\Debug\Powershell.dll
+D:\Github\Powershell\Powershell\bin\Debug\Powershell.pdb
+D:\Github\Powershell\Powershell\obj\Debug\Powershell.csprojResolveAssemblyReference.cache
+D:\Github\Powershell\Powershell\obj\Debug\Powershell.dll
+D:\Github\Powershell\Powershell\obj\Debug\Powershell.pdb

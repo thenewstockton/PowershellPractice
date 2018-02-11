@@ -1,0 +1,58 @@
+$PSVersionTable.PSVersion
+
+Set-ExecutionPolicy RemoteSigned
+Enable-PSRemoting
+
+$Profile
+Test-Path $Profile
+New-Item -path $profile -type file -force
+
+
+Get-Process | Format-wide 
+Get-Process | Format-wide -column 4
+Get-Process | Format-list
+
+
+get-process -name powershell | format-list -property processName, Fileversion, starttime.id
+ 
+ 
+get-process | Format-table
+get-process -name powershell | Format-table
+get-process -name powershell | Format-list
+
+get-process -name powershell | Format-table -property path,name-id,company -autosize
+get-process -name powershell | Format-table -wrap -property path,name-id,company -autosize
+get-process -name powershell | Format-table -wrap -property path,name-id,company -autosize -GroupBy Company
+
+$m = "Hello"
+$m | get-member
+$m.Length
+$m.toUpper()
+$m | get-member -membertype properties
+
+msg Ko1830T Hello
+
+[Reflection.Assembly]::LoadFile("c:\powershell.dll")
+
+$ml = new-object powershell.Messages
+$ml.SendMsg()
+$ml | Get-Member
+
+Get-Service | Where-Object {$_.DisplayName -Match "MS"}
+
+Get-ExecutionPolicy
+
+Set-ExecutionPolicy RemoteSigned
+
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "D:\Github\Powershell\FirstScript.ps1"
+
+[int]$t = 7
+
+$7 = "Tert" //This will get issue
+
+$serverIP="10.10.10.10"
+Set-Variable serverIP -option Readonly
+Set-Variable serverIP -option none -force
+Remove-Variable serverIP -force
+
+Set-Variable serverIP -option Constant -value '11.11'
